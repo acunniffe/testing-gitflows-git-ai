@@ -1,1 +1,3 @@
-function reverseAlphabet() {}
+function reverseAlphabet(): string {
+  return "zyxwvutsrqponmlkjihgfedcba";
+}
