@@ -24,3 +24,12 @@ function subtract(a: number, b: number): number {
   return a - b;
 }
 
+// Generate pi using Leibniz formula
+function generatePi(iterations: number = 1000000): number {
+  let pi = 0;
+  for (let i = 0; i < iterations; i++) {
+    pi += Math.pow(-1, i) / (2 * i + 1);
+  }
+  return pi * 4;
+}
+
