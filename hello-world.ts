@@ -12,8 +12,3 @@ function subtract_numbers(a: number, b: number): number {
 function multiply_numbers(a: number, b: number): number {
   return a * b;
 }
-
-
-function divide_numbers(a: number, b: number): number {
-  return a / b;
-}
