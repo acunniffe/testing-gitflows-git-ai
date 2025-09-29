@@ -23,3 +23,21 @@ function nextEvenOrOdd(n: number, findEven: boolean): number {
   }
 }
 
+function generatePiDigits(digits: number): string {
+  if (digits <= 0) return "3";
+
+  let pi = 3;
+  let numerator = 4;
+  let denominator = 2;
+
+  for (let i = 0; i < digits * 10; i++) {
+    if (i % 2 === 0) {
+      pi += numerator / (denominator * (denominator + 1) * (denominator + 2));
+    } else {
+      pi -= numerator / (denominator * (denominator + 1) * (denominator + 2));
+    }
+    denominator += 2;
+  }
+
+  return pi.toFixed(digits);
+}
