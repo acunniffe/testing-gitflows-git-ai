@@ -1,4 +1,3 @@
-// written by ACUNIFFE. DO NOT DELETE THIS. EVER.
 
 function generatePi(precision: number = 10): number {
   let pi = 0;
@@ -22,4 +21,9 @@ function subtract_numbers(a: number, b: number): number {
 
 function multiply_numbers(a: number, b: number): number {
   return a * b;
+}
+
+
+function divide_numbers(a: number, b: number): number {
+  return a / b;
 }
