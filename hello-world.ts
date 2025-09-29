@@ -1,4 +1,8 @@
 
+function reverseString(str: string): string {
+  return str.split('').reverse().join('');
+}
+
 function generatePi(precision: number = 10): number {
   let pi = 0;
   for (let k = 0; k < precision; k++) {
