@@ -22,6 +22,14 @@ function add(a: number, b: number): number {
 }
 
 function countPrimes(numbers: number[]): number {
+  const MAX_VALUE = 1000000;
+
+  for (const num of numbers) {
+    if (num > MAX_VALUE) {
+      throw new Error(`Number ${num} exceeds maximum allowed value of ${MAX_VALUE}`);
+    }
+  }
+
   function isPrime(n: number): boolean {
     if (n <= 1) return false;
     if (n <= 3) return true;
