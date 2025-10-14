@@ -1,0 +1,33 @@
+harry-potter-books.ts
+  0b64764 12-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "base_commit_sha": "d354e21b5e5762695b0ca6783d09802c6d6a185c",
+  "prompts": {
+    "0b64764": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7afab0a5-2ff1-46aa-ae03-b883c7ac3776",
+        "model": "cursor-small"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "generate all the harry potter book titles as const BOOK_N = \"<NAME>\"",
+          "timestamp": "2025-10-14T19:02:37.141Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I have created a new file `harry-potter-books.ts` with the Harry Potter book titles as constants.",
+          "timestamp": "2025-10-14T19:02:39.479Z"
+        }
+      ],
+      "total_additions": 4,
+      "total_deletions": 0,
+      "accepted_lines": 4,
+      "overriden_lines": 0
+    }
+  }
+}
