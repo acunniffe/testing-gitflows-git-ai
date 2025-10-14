@@ -1,0 +1,22 @@
+harry-potter-books.ts
+  0b64764 2-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "base_commit_sha": "ad419fa20865d349533836c72623fa11e122fd8a",
+  "prompts": {
+    "0b64764": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7afab0a5-2ff1-46aa-ae03-b883c7ac3776",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 7,
+      "total_deletions": 0,
+      "accepted_lines": 7,
+      "overriden_lines": 0
+    }
+  }
+}
