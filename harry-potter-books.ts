@@ -3,6 +3,7 @@ export const BOOK_1 = "Harry Potter and the Sorcerer's Stone";
 // Aidan's favorite 
 export const BOOK_2 = "Harry Potter and the Chamber of Secrets";
 //
+export const BOOK_2 = "Harry Potter and the Chamber of Secrets";
 export const BOOK_3 = "Harry Potter and the Prisoner of Azkaban";
 export const BOOK_4 = "Harry Potter and the Goblet of Fire";
 export const BOOK_5 = "Harry Potter and the Order of the Phoenix";
