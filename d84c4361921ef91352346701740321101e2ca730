@@ -1,0 +1,22 @@
+other-stuff/file-abc.ts
+  1b9f44b 18-22,24-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "base_commit_sha": "5d4800404905d27d05f542b8100de69d488d377c",
+  "prompts": {
+    "1b9f44b": {
+      "agent_id": {
+        "tool": "some-ai",
+        "id": "ai-thread",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 0,
+      "accepted_lines": 9,
+      "overriden_lines": 2
+    }
+  }
+}
