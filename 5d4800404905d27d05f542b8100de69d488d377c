@@ -1,0 +1,22 @@
+other-stuff/file-abc.ts
+  372a97d 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "base_commit_sha": "ca192a44270aba3ddc4990dcfbe3619a87900aba",
+  "prompts": {
+    "372a97d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "52fd112f-6a4c-4c1a-a296-66ab12bb3ca5",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 1,
+      "accepted_lines": 11,
+      "overriden_lines": 0
+    }
+  }
+}
