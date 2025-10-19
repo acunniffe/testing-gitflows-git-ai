@@ -1,6 +1,36 @@
+other-stuff/file-abc.ts
+  52fd112f-6a4c-4c1a-a296-66ab12bb3ca5 1-2,4-11
+  ai-thread 18-22,24-27
 ---
 {
   "schema_version": "authorship/3.0.0",
   "base_commit_sha": "d226af15b1e9ffa1df1dced606457edc27a278d4",
-  "prompts": {}
+  "prompts": {
+    "52fd112f-6a4c-4c1a-a296-66ab12bb3ca5": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "52fd112f-6a4c-4c1a-a296-66ab12bb3ca5",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 1,
+      "accepted_lines": 10,
+      "overriden_lines": 0
+    },
+    "ai-thread": {
+      "agent_id": {
+        "tool": "some-ai",
+        "id": "ai-thread",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 0,
+      "accepted_lines": 9,
+      "overriden_lines": 2
+    }
+  }
 }
