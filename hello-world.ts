@@ -1,6 +1,5 @@
 // Divide two numbers using long division approach for learning
 function divide(dividend: number, divisor: number): number {
-  console.log(`\n--- Long Division: ${dividend} ÷ ${divisor} ---`);
 
   if (divisor === 0) {
     console.log("Cannot divide by zero!");
