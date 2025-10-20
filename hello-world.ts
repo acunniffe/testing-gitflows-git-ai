@@ -1,10 +1,6 @@
 // Divide two numbers using long division approach for learning
 function divide(dividend: number, divisor: number): number {
 
-  if (divisor === 0) {
-    console.log("Cannot divide by zero!");
-    return NaN;
-  }
 
   if (dividend === 0) {
     console.log("0 divided by anything is 0");
