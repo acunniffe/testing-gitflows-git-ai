@@ -1,0 +1,52 @@
+hello-world.ts
+  0001431 61-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "base_commit_sha": "7f4a4e9b19e638dc6587f1d7aeda833950d0e709",
+  "prompts": {
+    "0001431": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "8837ee3b-8a5e-4439-9b64-d6ce46458ec9",
+        "model": "default"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "add a multiply function to this file",
+          "timestamp": "2025-10-21T14:12:07.125Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I'll read the file first to see what's already there, then add a multiply function.",
+          "timestamp": "2025-10-21T14:12:10.831Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "read_file",
+          "input": {
+            "target_file": "/Users/aidancunniffe/testing-gitflows-git-ai/hello-world.ts"
+          }
+        },
+        {
+          "type": "assistant",
+          "text": "I can see the file has several mathematical functions. I'll add a multiply function following the same style as the existing `add` and `subtract` functions. I'll place it right after the `subtract` function.",
+          "timestamp": "2025-10-21T14:12:16.336Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "search_replace",
+          "input": {
+            "file_path": ""
+          }
+        }
+      ],
+      "total_additions": 5,
+      "total_deletions": 0,
+      "accepted_lines": 5,
+      "overriden_lines": 0
+    }
+  }
+}
