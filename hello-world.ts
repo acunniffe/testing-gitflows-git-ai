@@ -58,6 +58,11 @@ function subtract(a: number, b: number): number {
   return a - b;
 }
 
+// Multiply two numbers
+function multiply(a: number, b: number): number {
+  return a * b;
+}
+
 // Generate pi using Leibniz formula
 function generatePi(iterations: number = 1000000): number {
   let pi = 0;
