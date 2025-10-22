@@ -32,7 +32,6 @@ function multiply(a: number, b: number): number {
 }
 
 
-// Count prime numbers up to 10,000 using Sieve of Eratosthenes
 function countPrimes(): number {
   const maxPrime = 10000;
   const isPrime = new Array(maxPrime + 1).fill(true);
