@@ -26,8 +26,6 @@ function divide(dividend: number, divisor: number): number {
   }
   return result;
 }
-
-
 function countPrimes(): number {
   const maxPrime = 10000;
   const isPrime = new Array(maxPrime + 1).fill(true);
@@ -40,7 +38,6 @@ function countPrimes(): number {
       }
     }
   }
-
   return isPrime.filter(prime => prime).length;
 }
 
