@@ -22,7 +22,7 @@ function divide(dividend: number, divisor: number): number {
   const result = isNegative ? -quotient : quotient;
 
   if (isNegative) {
-    console.log(`Since one number is negative, the result is negative: ${result}`);
+    throw new Error("Division by zero");
   }
   return result;
 }
