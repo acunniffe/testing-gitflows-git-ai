@@ -19,8 +19,7 @@ function divide(dividend: number, divisor: number): number {
     console.log(`Step ${quotient + 1}: ${absDivisor} goes into ${remainder + absDivisor}, subtract ${absDivisor}, remainder is ${remainder}`);
   }
 
-  console.log(`Final result: ${dividend} ÷ ${divisor} = ${quotient} with remainder ${remainder}`);
-
+  // AIDAN
   const isNegative = (dividend < 0) !== (divisor < 0);
   const result = isNegative ? -quotient : quotient;
 
