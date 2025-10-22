@@ -26,10 +26,6 @@ function divide(dividend: number, divisor: number): number {
   }
   return result;
 }
-// Line2 
-function multiply(a: number, b: number): number {
-  return a * b;
-}
 
 
 function countPrimes(): number {
