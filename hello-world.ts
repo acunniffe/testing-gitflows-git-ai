@@ -21,7 +21,6 @@ function divide(dividend: number, divisor: number): number {
 
   console.log(`Final result: ${dividend} ÷ ${divisor} = ${quotient} with remainder ${remainder}`);
 
-  // Handle negative numbers
   const isNegative = (dividend < 0) !== (divisor < 0);
   const result = isNegative ? -quotient : quotient;
 
