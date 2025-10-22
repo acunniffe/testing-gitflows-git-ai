@@ -11,8 +11,6 @@ function divide(dividend: number, divisor: number): number {
   let remainder = Math.abs(dividend);
   const absDivisor = Math.abs(divisor);
 
-
-  // Aidan added this 
   console.log(`Step 1: We're dividing ${Math.abs(dividend)} by ${absDivisor}`);
 
   while (remainder >= absDivisor) {
