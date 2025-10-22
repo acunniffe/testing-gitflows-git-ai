@@ -1,0 +1,22 @@
+hello-world.ts
+  220aec5 94-196
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "base_commit_sha": "52b6080c4db0735236793e1d172841207515b048",
+  "prompts": {
+    "220aec5": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ad9162d8-c9fa-4638-ad21-96e29d0cbf43",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 103,
+      "total_deletions": 0,
+      "accepted_lines": 103,
+      "overriden_lines": 0
+    }
+  }
+}
