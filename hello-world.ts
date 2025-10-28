@@ -34,6 +34,8 @@ function divide(dividend: number, divisor: number): number {
     console.log(`Since one number is negative, the result is negative: ${result}`);
   }
 
+  // new comment
+
   return result;
 }
 
