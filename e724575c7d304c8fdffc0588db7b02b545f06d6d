@@ -1,0 +1,68 @@
+other-stuff/file-abc.ts
+  52fd112f-6a4c-4c1a-a296-66ab12bb3ca5 1-2,4-11
+  ai-thread 18-22,24-27
+authorship.ts
+  b614856 5-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.17",
+  "base_commit_sha": "e724575c7d304c8fdffc0588db7b02b545f06d6d",
+  "prompts": {
+    "52fd112f-6a4c-4c1a-a296-66ab12bb3ca5": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "52fd112f-6a4c-4c1a-a296-66ab12bb3ca5",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 10,
+      "overriden_lines": 0
+    },
+    "ai-thread": {
+      "agent_id": {
+        "tool": "some-ai",
+        "id": "ai-thread",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 9,
+      "overriden_lines": 0
+    },
+    "b614856": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "9dd45923-e60d-4777-bd89-0cb0424313ef",
+        "model": "cursor-small"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "add a bunch of math code to this file",
+          "timestamp": "2025-11-09T13:02:46.118Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I can add math code to `authorship.ts`. What kind of math code would you like to add? For example, do you want to add functions for calculations, mathematical constants, or something else?",
+          "timestamp": "2025-11-09T13:02:48.015Z"
+        },
+        {
+          "type": "user",
+          "text": "set ops helpers",
+          "timestamp": "2025-11-09T13:02:58.975Z"
+        }
+      ],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 56,
+      "overriden_lines": 0
+    }
+  }
+}
