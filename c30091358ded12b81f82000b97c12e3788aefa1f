@@ -1,0 +1,23 @@
+authorship.ts
+  0b3e1de 67
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.17",
+  "base_commit_sha": "c30091358ded12b81f82000b97c12e3788aefa1f",
+  "prompts": {
+    "0b3e1de": {
+      "agent_id": {
+        "tool": "mock_ai",
+        "id": "ai-thread-1762702778141393000",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
