@@ -2,6 +2,7 @@
 
 // Aidan wrote this line
 
+// AIDAN SAID THI
 export const intersection = <T>(setA: Set<T>, setB: Set<T>): Set<T> => {
   const _intersection = new Set<T>();
   for (const elem of setB) {
