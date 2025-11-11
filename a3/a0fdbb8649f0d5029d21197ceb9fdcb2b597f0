@@ -1,0 +1,23 @@
+set-ops.ts
+  cb60961 1-2,6-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.19",
+  "base_commit_sha": "a3a0fdbb8649f0d5029d21197ceb9fdcb2b597f0",
+  "prompts": {
+    "cb60961": {
+      "agent_id": {
+        "tool": "mock_ai",
+        "id": "ai-thread-1762879601635835000",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 7,
+      "total_deletions": 0,
+      "accepted_lines": 7,
+      "overriden_lines": 0
+    }
+  }
+}
