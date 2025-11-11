@@ -1,0 +1,23 @@
+set-ops.ts
+  2c802e2 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.19",
+  "base_commit_sha": "89746d2441280a670f153ffdfa2cb4f240be38d9",
+  "prompts": {
+    "2c802e2": {
+      "agent_id": {
+        "tool": "mock_ai",
+        "id": "ai-thread-1762879497281765000",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
