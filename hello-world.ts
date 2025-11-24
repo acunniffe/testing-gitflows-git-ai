@@ -63,13 +63,54 @@ function subtract(a: number, b: number): number {
   return a - b;
 }
 
-// Generate pi using Leibniz formula
-function generatePi(iterations: number = 1000000): number {
-  let pi = 0;
+// Helper function to compute arctan using Taylor series
+function arctan(x: number, iterations: number): number {
+  let result = 0;
+  const xSquared = x * x;
+  let power = x;
+  
   for (let i = 0; i < iterations; i++) {
-    pi += Math.pow(-1, i) / (2 * i + 1);
+    const term = power / (2 * i + 1);
+    if (i % 2 === 0) {
+      result += term;
+    } else {
+      result -= term;
+    }
+    power *= xSquared;
   }
-  return pi * 4;
+  
+  return result;
+}
+
+// Generate pi using Machin's formula (much faster convergence than Leibniz)
+// π/4 = 4*arctan(1/5) - arctan(1/239)
+function generatePi(iterations: number = 20): number {
+  // Machin's formula converges very quickly - only need ~20 iterations for high precision
+  const arctan1_5 = arctan(1/5, iterations);
+  const arctan1_239 = arctan(1/239, iterations);
+  return 4 * (4 * arctan1_5 - arctan1_239);
+}
+
+// Alternative: Generate pi using Chudnovsky algorithm (extremely fast convergence)
+// This is the algorithm used to calculate pi to billions of digits
+function generatePiChudnovsky(iterations: number = 5): number {
+  let sum = 0;
+  let factorial = 1;
+  let factorial3 = 1;
+  
+  for (let k = 0; k < iterations; k++) {
+    if (k > 0) {
+      factorial *= k;
+      factorial3 *= (6 * k - 5) * (6 * k - 4) * (6 * k - 3) * (6 * k - 2) * (6 * k - 1) * (6 * k);
+    }
+    
+    const numerator = factorial * (545140134 * k + 13591409);
+    const denominator = factorial3 * Math.pow(640320, 3 * k + 1.5);
+    
+    sum += numerator / denominator;
+  }
+  
+  return 1 / (12 * sum);
 }
 
 // Count prime numbers up to 10,000 using Sieve of Eratosthenes
