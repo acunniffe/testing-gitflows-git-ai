@@ -1,0 +1,23 @@
+Readme.md
+  6722cd7 2-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.22",
+  "base_commit_sha": "a731df761a0aea9dd8f17d889cdcbea998edb019",
+  "prompts": {
+    "6722cd7": {
+      "agent_id": {
+        "tool": "mock_ai",
+        "id": "ai-thread-1764095998919436000",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 4,
+      "total_deletions": 1,
+      "accepted_lines": 3,
+      "overriden_lines": 0
+    }
+  }
+}
