@@ -33,6 +33,7 @@ jobs:
           git-ai ci github run
       - name: Export opentelemetry to your destination
         run: |
+          cd git-ai-ci-clone
           git-ai-otel export-pr ${{ github.event.pull_request.html_url }} ${{ github.event.repository.html_url }} merged ${{ github.event.pull_request.merge_commit_sha }} --dry-run
 
   daily-job:
@@ -42,3 +43,7 @@ jobs:
     steps:
       - name: Daily run
         run: echo "I RAN"
+      - name: Export opentelemetry to your destination
+        run: |
+          cd git-ai-ci-clone
+          git-ai-otel export --dry-run ${{ github.event.repository.html_url }}
