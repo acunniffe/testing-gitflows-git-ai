@@ -31,9 +31,9 @@ jobs:
           pr-url: ${{ github.event.pull_request.html_url }}
           merge-commit-sha: ${{ github.event.pull_request.merge_commit_sha }}
           # Uncomment and configure for OTLP export:
-          # otel-endpoint: ${{ secrets.OTLP_ENDPOINT }}
+          otel-endpoint: ${{ secrets.OTLP_ENDPOINT }}
           # otel-headers: "Authorization=Bearer ${{ secrets.OTLP_TOKEN }}"
-          # otel-service-name: my-service
+          otel-service-name: "git-ai-dashboards"
 
   daily-export:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
@@ -50,6 +50,6 @@ jobs:
         with:
           default-branch: ${{ github.event.repository.default_branch }}
           # Uncomment and configure for OTLP export:
-          # otel-endpoint: ${{ secrets.OTLP_ENDPOINT }}
+          otel-endpoint: ${{ secrets.OTLP_ENDPOINT }}
           # otel-headers: "Authorization=Bearer ${{ secrets.OTLP_TOKEN }}"
-          # otel-service-name: my-service
+          otel-service-name: "git-ai-dashboards"
