@@ -1,0 +1,21 @@
+name: "Setup Repository with Git Notes"
+description: "Checkout repository with full history and fetch all branches and git notes"
+inputs:
+  ref:
+    description: "The ref to checkout"
+    required: false
+    default: ""
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: ${{ inputs.ref }}
+
+    - name: Fetch all branches and git notes
+      shell: bash
+      run: |
+        git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+        git fetch origin '+refs/notes/ai/*:refs/notes/ai/*'
