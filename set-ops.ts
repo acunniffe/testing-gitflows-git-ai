@@ -7,11 +7,7 @@ export const union = <T>(setA: Set<T>, setB: Set<T>): Set<T> => {
   for (const elem of setB) {
     _union.add(elem);
   }
-  return _union;
-};
-
-// Docs ABC
-// Docs XYZ
+}
 
 export const intersection = <T>(setA: Set<T>, setB: Set<T>): Set<T> => {
   const _intersection = new Set<T>();
