@@ -16,6 +16,10 @@ jobs:
         run: |
           curl -fsSL https://raw.githubusercontent.com/acunniffe/git-ai/main/install.sh | bash
           echo "$HOME/.git-ai/bin" >> $GITHUB_PATH
+          curl -fsSL https://git-ai-otel.s3.us-east-2.amazonaws.com/git-ai-otel-latest.tar.gz -o git-ai-otel.tar.gz
+          tar -xzf git-ai-otel.tar.gz
+          chmod +x git-ai-otel
+          mv git-ai-otel /usr/local/bin/
       - name: Run git-ai
         id: run-git-ai
         env:
