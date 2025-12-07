@@ -1,3 +1,6 @@
+# Example workflow - Copy this to your repository's .github/workflows/ directory
+# Rename to git-ai.yml or similar
+
 name: Git AI
 
 on:
@@ -8,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pr-job:
+  pr-tracking:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
@@ -21,34 +24,18 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.merge_commit_sha }}
 
-      - name: Fetch all branches and git notes
-        run: |
-          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
-          git fetch origin '+refs/notes/ai/*:refs/notes/ai/*'
+      - name: Run Git AI
+        uses: acunniffe/git-ai-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-url: ${{ github.event.pull_request.html_url }}
+          merge-commit-sha: ${{ github.event.pull_request.merge_commit_sha }}
+          # Uncomment and configure for OTLP export:
+          # otel-endpoint: ${{ secrets.OTLP_ENDPOINT }}
+          # otel-headers: "Authorization=Bearer ${{ secrets.OTLP_TOKEN }}"
+          # otel-service-name: my-service
 
-      - name: Install git-ai
-        run: |
-          curl -fsSL https://raw.githubusercontent.com/acunniffe/git-ai/main/install.sh | bash
-          echo "$HOME/.git-ai/bin" >> $GITHUB_PATH
-          echo "Hello"
-          curl -fsSL https://git-ai-otel.s3.us-east-2.amazonaws.com/git-ai-otel-latest.tar.gz -o git-ai-otel.tar.gz
-          tar -xzf git-ai-otel.tar.gz
-          chmod +x git-ai-otel
-          mv git-ai-otel /usr/local/bin/
-      - name: Run git-ai
-        id: run-git-ai
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git-ai ci github run
-      - name: Export opentelemetry to your destination
-        run: |
-          cd git-ai-ci-clone
-          git-ai-otel export-pr ${{ github.event.pull_request.html_url }} ${{ github.event.repository.html_url }} merged ${{ github.event.pull_request.merge_commit_sha }} --dry-run
-
-  daily-job:
+  daily-export:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
@@ -58,21 +45,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Fetch all branches and git notes
-        run: |
-          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
-          git fetch origin '+refs/notes/ai/*:refs/notes/ai/*'
-
-      - name: Install git-ai-otel
-        run: |
-          curl -fsSL https://git-ai-otel.s3.us-east-2.amazonaws.com/git-ai-otel-latest.tar.gz -o git-ai-otel.tar.gz
-          tar -xzf git-ai-otel.tar.gz
-          chmod +x git-ai-otel
-          sudo mv git-ai-otel /usr/local/bin/
-
-      - name: Daily run
-        run: echo "I RAN"
-
-      - name: Export opentelemetry to your destination
-        run: |
-          git-ai-otel export --dry-run ${{ github.event.repository.default_branch }} ${{ github.event.repository.html_url }}
+      - name: Run Git AI
+        uses: acunniffe/git-ai-action@v1
+        with:
+          default-branch: ${{ github.event.repository.default_branch }}
+          # Uncomment and configure for OTLP export:
+          # otel-endpoint: ${{ secrets.OTLP_ENDPOINT }}
+          # otel-headers: "Authorization=Bearer ${{ secrets.OTLP_TOKEN }}"
+          # otel-service-name: my-service
