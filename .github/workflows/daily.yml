@@ -3,9 +3,12 @@ name: Git AI
 on:
   pull_request:
     types: [closed]
+  schedule:
+    - cron: "0 0 * * *" # Daily at midnight UTC
+  workflow_dispatch:
 
 jobs:
-  git-ai:
+  pr-job:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
@@ -28,3 +31,11 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git-ai ci github run
+
+  daily-job:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Daily run
+        run: echo "I RAN"
