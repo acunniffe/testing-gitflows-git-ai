@@ -15,21 +15,16 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Setup repository
+        uses: ./.github/actions/setup-repo
         with:
-          fetch-depth: 0 # Fetch all history for all branches
           ref: ${{ github.event.pull_request.merge_commit_sha }}
-
-      - name: Fetch all branches and git notes
-        run: |
-          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
-          git fetch origin '+refs/notes/ai/*:refs/notes/ai/*'
 
       - name: Install git-ai
         run: |
           curl -fsSL https://raw.githubusercontent.com/acunniffe/git-ai/main/install.sh | bash
           echo "$HOME/.git-ai/bin" >> $GITHUB_PATH
+          echo "Hello"
           curl -fsSL https://git-ai-otel.s3.us-east-2.amazonaws.com/git-ai-otel-latest.tar.gz -o git-ai-otel.tar.gz
           tar -xzf git-ai-otel.tar.gz
           chmod +x git-ai-otel
@@ -52,15 +47,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Fetch all history for all branches
-
-      - name: Fetch all branches and git notes
-        run: |
-          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
-          git fetch origin '+refs/notes/ai/*:refs/notes/ai/*'
+      - name: Setup repository
+        uses: ./.github/actions/setup-repo
 
       - name: Install git-ai-otel
         run: |
