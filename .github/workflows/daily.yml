@@ -74,4 +74,4 @@ jobs:
 
       - name: Export opentelemetry to your destination
         run: |
-          git-ai-otel export --dry-run ${{ github.event.repository.html_url }}
+          git-ai-otel export --dry-run ${{ github.event.repository.default_branch }} ${{ github.event.repository.html_url }}
