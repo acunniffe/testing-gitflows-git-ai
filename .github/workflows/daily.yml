@@ -52,6 +52,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for all branches
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
+
+      - name: Fetch all branches and git notes
+        run: |
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+          git fetch origin '+refs/notes/ai/*:refs/notes/ai/*'
+
       - name: Daily run
         run: echo "I RAN"
       - name: Export opentelemetry to your destination
