@@ -1,0 +1,23 @@
+new-aidan-file
+  0053c01 4-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.22",
+  "base_commit_sha": "646ab28c19ceb688226d64d7f6799dceb9b46942",
+  "prompts": {
+    "0053c01": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ea617178-00bb-4161-b20f-90e98398d1f6",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 8,
+      "total_deletions": 1,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
