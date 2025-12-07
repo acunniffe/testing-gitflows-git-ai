@@ -67,5 +67,4 @@ jobs:
         run: echo "I RAN"
       - name: Export opentelemetry to your destination
         run: |
-          cd git-ai-ci-clone
           git-ai-otel export --dry-run ${{ github.event.repository.html_url }}
