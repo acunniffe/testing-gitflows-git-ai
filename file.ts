@@ -118,6 +118,4 @@ export function calculateEToPowerX(x: number, iterations: number): number {
 }
 
 // Example usage for e:
-// console.log('Series (20 iterations):', calculateESeries(20));
-// console.log('Limit (1000000):', calculateELimit(1000000));
-// console.log('e^2 (20 iterations):', calculateEToPowerX(2, 20));
+// console.log(
