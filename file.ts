@@ -64,3 +64,60 @@ export function calculatePiNilakantha(iterations: number): number {
 // console.log('Leibniz (1000 iterations):', calculatePiLeibniz(1000));
 // console.log('Monte Carlo (100000 iterations):', calculatePiMonteCarlo(100000));
 // console.log('Nilakantha (100 iterations):', calculatePiNilakantha(100));
+
+/**
+ * Calculate e (Euler's number) using the infinite series
+ * e = 1 + 1/1! + 1/2! + 1/3! + 1/4! + ...
+ * 
+ * @param iterations - Number of iterations (more iterations = more accuracy)
+ * @returns Approximation of e
+ */
+export function calculateESeries(iterations: number): number {
+  let e = 1;
+  let factorial = 1;
+  
+  for (let i = 1; i <= iterations; i++) {
+    factorial *= i;
+    e += 1 / factorial;
+  }
+  
+  return e;
+}
+
+/**
+ * Calculate e using the limit definition
+ * e = lim(n→∞) (1 + 1/n)^n
+ * 
+ * @param n - Large number to approximate the limit (larger n = more accuracy)
+ * @returns Approximation of e
+ */
+export function calculateELimit(n: number): number {
+  return Math.pow(1 + 1 / n, n);
+}
+
+/**
+ * Calculate e^x using the Taylor series expansion
+ * e^x = 1 + x/1! + x²/2! + x³/3! + ...
+ * 
+ * @param x - The exponent
+ * @param iterations - Number of iterations (more iterations = more accuracy)
+ * @returns Approximation of e^x
+ */
+export function calculateEToPowerX(x: number, iterations: number): number {
+  let result = 1;
+  let factorial = 1;
+  let power = 1;
+  
+  for (let i = 1; i <= iterations; i++) {
+    factorial *= i;
+    power *= x;
+    result += power / factorial;
+  }
+  
+  return result;
+}
+
+// Example usage for e:
+// console.log('Series (20 iterations):', calculateESeries(20));
+// console.log('Limit (1000000):', calculateELimit(1000000));
+// console.log('e^2 (20 iterations):', calculateEToPowerX(2, 20));
