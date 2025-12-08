@@ -117,13 +117,6 @@ export function calculateEToPowerX(x: number, iterations: number): number {
   return result;
 }
 
-/**
- * Calculate factorial of a number
- * n! = n × (n-1) × (n-2) × ... × 1
- * 
- * @param n - The number to calculate factorial for
- * @returns Factorial of n
- */
 export function factorial(n: number): number {
   if (n < 0) throw new Error('Factorial is not defined for negative numbers');
   if (n === 0 || n === 1) return 1;
