@@ -14,9 +14,9 @@ jobs:
   pr-close:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    continue-on-error: true
     permissions:
       contents: write
-
     steps:
       - name: Run Git AI PR Close
         uses: git-ai-project/action/pr-close@main
@@ -31,9 +31,9 @@ jobs:
   daily-metrics:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    continue-on-error: true
     permissions:
       contents: read
-
     steps:
       - name: Run Git AI Daily Metrics
         uses: git-ai-project/action/daily-metrics@main
