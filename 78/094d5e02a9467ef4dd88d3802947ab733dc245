@@ -1,0 +1,64 @@
+file.ts
+  b25e5b06ec94b6cf 120-366
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.23",
+  "base_commit_sha": "78094d5e02a9467ef4dd88d3802947ab733dc245",
+  "prompts": {
+    "b25e5b06ec94b6cf": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "de7763d1-a488-48af-973e-5e3139c13d74",
+        "model": "composer-1"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "generate a pi calculation funciton",
+          "timestamp": "2025-12-08T13:42:46.592Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Checking the current file, then adding a pi calculation function.",
+          "timestamp": "2025-12-08T13:42:48.076Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Adding a pi calculation function to this file. Implementing multiple methods for calculating pi:",
+          "timestamp": "2025-12-08T13:42:48.769Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Added three pi calculation functions to `file.ts`:\n\n1. **`calculatePiLeibniz`** — Leibniz formula (infinite series)\n2. **`calculatePiMonteCarlo`** — Monte Carlo method (random sampling)\n3. **`calculatePiNilakantha`** — Nilakantha series (faster convergence)\n\nAll functions are exported and include JSDoc comments. The Nilakantha series converges faster than Leibniz, while Monte Carlo is probabilistic and useful for demonstrations.\n\nExample usage is included in comments. You can import and use any of these functions in your code.",
+          "timestamp": "2025-12-08T13:42:54.644Z"
+        },
+        {
+          "type": "user",
+          "text": "now do a e calculator",
+          "timestamp": "2025-12-08T13:48:10.016Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Adding e (Euler's number) calculation functions. Checking the current file:",
+          "timestamp": "2025-12-08T13:48:11.771Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Adding e (Euler's number) calculation functions:",
+          "timestamp": "2025-12-08T13:48:13.245Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Added three e (Euler's number) calculation functions:\n\n1. **`calculateESeries`** — Uses the infinite series: e = 1 + 1/1! + 1/2! + 1/3! + ...\n2. **`calculateELimit`** — Uses the limit definition: e = lim(n→∞) (1 + 1/n)^n\n3. **`calculateEToPowerX`** — Calculates e^x using the Taylor series expansion\n\nAll functions are exported and documented. The series method converges quickly (about 20 iterations for good accuracy). The limit method is simpler but requires larger n values. The e^x function is a bonus for computing any power of e.\n\nExample usage is included in comments at the bottom of the file.",
+          "timestamp": "2025-12-08T13:48:16.636Z"
+        }
+      ],
+      "total_additions": 247,
+      "total_deletions": 4,
+      "accepted_lines": 247,
+      "overriden_lines": 0
+    }
+  }
+}
