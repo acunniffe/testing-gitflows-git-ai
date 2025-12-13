@@ -1,0 +1,58 @@
+login-form.react.ts
+  1f18e66dd7385ff3 1-153
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.25",
+  "base_commit_sha": "6485bb6f0852fcd531c3a363fc687829793c7892",
+  "prompts": {
+    "1f18e66dd7385ff3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "504b54ce-f0d9-4946-ad4a-282df964732c",
+        "model": "default"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "build me a login form in react\n\nusername\npassword\n\nand an svg of a shark centeraed on a page. \n\nthere's an api /api/login \n\nand it redirects to /home when you've logged in",
+          "timestamp": "2025-12-13T19:53:48.585Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Reviewing the project structure and existing files.",
+          "timestamp": "2025-12-13T19:53:52.285Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "glob_file_search",
+          "input": {
+            "globPattern": "package.json"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "glob_file_search",
+          "input": {
+            "globPattern": "tsconfig.json"
+          }
+        },
+        {
+          "type": "assistant",
+          "text": "Checking other files to understand the project setup:",
+          "timestamp": "2025-12-13T19:53:54.674Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Creating a React login form with username and password fields, a centered shark SVG, and API integration.",
+          "timestamp": "2025-12-13T19:53:59.260Z"
+        }
+      ],
+      "total_additions": 158,
+      "total_deletions": 5,
+      "accepted_lines": 153,
+      "overriden_lines": 0
+    }
+  }
+}
