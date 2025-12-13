@@ -1,0 +1,39 @@
+.github/workflows/daily.yml
+  f6d9ebd9ec08a74f 8,14-22,24-26,57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.25",
+  "base_commit_sha": "910e5641c6c8a581d624beff8c3923011eb0dd13",
+  "prompts": {
+    "f6d9ebd9ec08a74f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b601fd81-d44e-4d32-a8b6-a9c6b73a37eb",
+        "model": "claude-4.5-sonnet-thinking"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "@.github/workflows/daily.yml:1-45 add support for \nthe new PR diff viewer \n\nname: \"Git AI PR Viewer\"\ndescription: \"Upload AI-assisted diff data for pull requests\"\nauthor: \"acunniffe\"\nbranding:\n  icon: \"git-pull-request\"\n  color: \"purple\"\n\ninputs:\n  git-ai-version:\n    description: \"Version of git-ai to install (e.g., 'v1.0.23'). Defaults to latest release.\"\n    required: false\n    default: \"latest\"\n  git-ai-repo:\n    description: \"GitHub repo to download git-ai from (owner/repo format).\"\n    required: false\n    default: \"acunniffe/git-ai\"\n  github-token:\n    description: \"GitHub token for API access\"\n    required: false\n    default: ${{ github.token }}\n  OTEL_EXPORTER_OTLP_ENDPOINT:\n    description: \"OpenTelemetry endpoint URL\"\n    required: false\n  OTEL_EXPORTER_OTLP_HEADERS:\n    description: \"OpenTelemetry headers (key=value format, comma separated)\"\n    required: false\n  OTEL_SERVICE_NAME:\n    description: \"OpenTelemetry service name\"\n    required: false\n\nruns:\n  using: \"composite\"\n  steps:\n    - name: Checkout repository\n      uses: actions/checkout@v4\n      with:\n        path: git-ai-ci-clone\n        fetch-depth: 0\n\n    - name: Install git-ai\n      shell: bash\n      run: |\n        VERSION=\"${{ inputs.git-ai-version }}\"\n        REPO=\"${{ inputs.git-ai-repo }}\"\n        if [ \"$VERSION\" = \"latest\" ]; then\n          VERSION=$(curl -fsSL \"https://api.github.com/repos/${REPO}/releases/latest\" | jq -r '.tag_name')\n        fi\n\n        INSTALL_URL=\"https://github.com/${REPO}/releases/download/${VERSION}/install.sh\"\n        HTTP_STATUS=$(curl -fsSL -w \"%{http_code}\" -o /tmp/install.sh \"$INSTALL_URL\" 2>/dev/null || echo \"000\")\n\n        if [ \"$HTTP_STATUS\" != \"200\" ]; then\n          echo \"Error: Failed to download install.sh for version ${VERSION}\"\n          exit 1\n        fi\n\n        bash /tmp/install.sh\n        rm /tmp/install.sh\n        echo \"$HOME/.git-ai/bin\" >> $GITHUB_PATH\n\n        curl -fsSL https://git-ai-otel.s3.us-east-2.amazonaws.com/git-ai-otel-latest.tar.gz -o git-ai-otel.tar.gz\n        tar -xzf git-ai-otel.tar.gz\n        chmod +x git-ai-otel\n        sudo mv git-ai-otel /usr/local/bin/\n\n    - name: Upload AI diff for PR\n      shell: bash\n      working-directory: git-ai-ci-clone\n      env:\n        GH_TOKEN: ${{ inputs.github-token }}\n        OTEL_EXPORTER_OTLP_ENDPOINT: ${{ inputs.OTEL_EXPORTER_OTLP_ENDPOINT }}\n        OTEL_EXPORTER_OTLP_HEADERS: ${{ inputs.OTEL_EXPORTER_OTLP_HEADERS }}\n        OTEL_SERVICE_NAME: ${{ inputs.OTEL_SERVICE_NAME }}\n      run: |\n        git fetch origin\n\n        BASE_SHA=\"${{ github.event.pull_request.base.sha }}\"\n        HEAD_SHA=\"${{ github.event.pull_request.head.sha }}\"\n        OWNER=\"${{ github.repository_owner }}\"\n        REPO=\"${{ github.event.repository.name }}\"\n        PR_NUMBER=\"${{ github.event.pull_request.number }}\"\n        PR_URL=\"${{ github.event.pull_request.html_url }}\"\n\n        # Fetch PR metadata using gh cli\n        PR_METADATA=$(gh pr view \"$PR_NUMBER\" --json title,author,labels,createdAt,updatedAt,baseRefName,headRefName,additions,deletions,changedFiles)\n\n        echo \"Uploading AI diff for PR #${PR_NUMBER}\"\n        echo \"Base SHA: ${BASE_SHA}\"\n        echo \"Head SHA: ${HEAD_SHA}\"\n\n        git-ai-otel upload-ai-diff \\\n          \"$BASE_SHA\" \\\n          \"$HEAD_SHA\" \\\n          \"$OWNER\" \\\n          \"$REPO\" \\\n          \"$PR_NUMBER\" \\\n          \"$PR_URL\" \\\n          \"$PR_METADATA\"",
+          "timestamp": "2025-12-13T17:13:58.993Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I'll add support for the new PR diff viewer to the workflow. This will add a job that runs when pull requests are opened or updated to upload AI-assisted diff data.",
+          "timestamp": "2025-12-13T17:14:08.520Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I've added support for the new PR diff viewer to your workflow! Here's what I added:\n\n**New `pr-viewer` job** that:\n- Runs when pull requests are **opened** or **synchronized** (updated)\n- Uses the `git-ai-project/action/pr-viewer@v1` action\n- Has appropriate permissions (`contents: read` and `pull-requests: read`)\n- Passes the GitHub token and OpenTelemetry configuration\n- Continues on error to avoid blocking PRs if there are issues\n\nThe job is positioned before the existing `pr-close` job and will automatically upload AI-assisted diff data whenever a PR is created or updated, enabling the new PR diff viewer functionality.\n\nThe workflow now supports all three Git AI dashboard features:\n1. **PR Viewer** - Uploads AI diff data when PRs are opened/updated\n2. **PR Close** - Processes data when PRs are merged\n3. **Daily Metrics** - Runs on schedule for daily analytics",
+          "timestamp": "2025-12-13T17:14:24.064Z"
+        }
+      ],
+      "total_additions": 19,
+      "total_deletions": 1,
+      "accepted_lines": 14,
+      "overriden_lines": 1
+    }
+  }
+}
