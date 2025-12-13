@@ -5,12 +5,25 @@ name: Git AI Dashboards
 
 on:
   pull_request:
-    types: [closed]
+    types: [closed, opened, synchronize]
   schedule:
     - cron: "0 0 * * *" # Daily at midnight UTC
   workflow_dispatch:
 
 jobs:
+  pr-viewer:
+    if: github.event.pull_request && (github.event.action == 'opened' || github.event.action == 'synchronize')
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Run Git AI PR Viewer
+        uses: git-ai-project/action/pr-diff-viewer@experimental/pr-viewer
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
   pr-close:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
@@ -40,3 +53,5 @@ jobs:
           OTEL_EXPORTER_OTLP_ENDPOINT: ${{ secrets.OTEL_EXPORTER_OTLP_ENDPOINT }}
           OTEL_EXPORTER_OTLP_HEADERS: ${{ secrets.OTEL_EXPORTER_OTLP_HEADERS }}
           OTEL_SERVICE_NAME: "git-ai-dashboards"
+
+
