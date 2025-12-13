@@ -1,0 +1,62 @@
+login-form.react.ts
+  5e0efc26b54ec03a 3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.25",
+  "base_commit_sha": "682574ae4976bbf1b03ee36e2d827655d0995d3e",
+  "prompts": {
+    "5e0efc26b54ec03a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "951d1942-fdd8-4d53-bfaf-505d823da4b2",
+        "model": "claude-sonnet-4-5-20250929"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "assistant",
+          "text": "I'll add \"Hello world\" to the file you have open.",
+          "timestamp": "2025-12-13T21:39:31.763Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "file_path": "/Users/aidancunniffe/testing-gitflows-git-ai/login-form.react.ts"
+          },
+          "timestamp": "2025-12-13T21:39:32.112Z"
+        },
+        {
+          "type": "user",
+          "text": "     1→import React, { useState } from 'react';\n     2→\n     3→export default function LoginForm() {\n     4→  const [username, setUsername] = useState('');\n     5→  const [password, setPassword] = useState('');\n     6→  const [error, setError] = useState('');\n     7→  const [loading, setLoading] = useState(false);\n     8→\n     9→  const handleSubmit = async (e: React.FormEvent) => {\n    10→    e.preventDefault();\n    11→    setError('');\n    12→    setLoading(true);\n    13→\n    14→    try {\n    15→      const response = await fetch('/api/login', {\n    16→        method: 'POST',\n    17→        headers: {\n    18→          'Content-Type': 'application/json',\n    19→        },\n    20→        body: JSON.stringify({ username, password }),\n    21→      });\n    22→\n    23→      if (response.ok) {\n    24→        window.location.href = '/home';\n    25→      } else {\n    26→        const data = await response.json().catch(() => ({}));\n    27→        setError(data.message || 'Login failed. Please check your credentials.');\n    28→      }\n    29→    } catch (err) {\n    30→      setError('An error occurred. Please try again.');\n    31→    } finally {\n    32→      setLoading(false);\n    33→    }\n    34→  };\n    35→\n    36→  return (\n    37→    <div className=\"min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-100 p-4\">\n    38→      <div className=\"w-full max-w-md space-y-8\">\n    39→        {/* Shark SVG - Centered */}\n    40→        <div className=\"flex justify-center\">\n    41→          <svg\n    42→            width=\"200\"\n    43→            height=\"200\"\n    44→            viewBox=\"0 0 200 200\"\n    45→            className=\"drop-shadow-lg\"\n    46→            xmlns=\"http://www.w3.org/2000/svg\"\n    47→          >\n    48→            {/* Shark Body */}\n    49→            <ellipse\n    50→              cx=\"100\"\n    51→              cy=\"100\"\n    52→              rx=\"70\"\n    53→              ry=\"50\"\n    54→              fill=\"#4B5563\"\n    55→              className=\"animate-pulse\"\n    56→            />\n    57→            {/* Shark Tail */}\n    58→            <path\n    59→              d=\"M 30 100 Q 10 80 20 60 Q 15 70 25 85 L 30 100 Z\"\n    60→              fill=\"#374151\"\n    61→            />\n    62→            <path\n    63→              d=\"M 30 100 Q 10 120 20 140 Q 15 130 25 115 L 30 100 Z\"\n    64→              fill=\"#374151\"\n    65→            />\n    66→            {/* Shark Fin (Top) */}\n    67→            <path\n    68→              d=\"M 80 60 Q 90 40 110 50 L 100 70 Z\"\n    69→              fill=\"#1F2937\"\n    70→            />\n    71→            {/* Shark Fin (Side) */}\n    72→            <path\n    73→              d=\"M 140 90 Q 160 85 165 100 Q 160 115 140 110 Z\"\n    74→              fill=\"#1F2937\"\n    75→            />\n    76→            {/* Shark Eye */}\n    77→            <circle cx=\"120\" cy=\"90\" r=\"8\" fill=\"#FFFFFF\" />\n    78→            <circle cx=\"122\" cy=\"88\" r=\"4\" fill=\"#000000\" />\n    79→            {/* Shark Mouth */}\n    80→            <path\n    81→              d=\"M 150 105 Q 160 110 155 115 Q 150 110 145 108 Z\"\n    82→              fill=\"#000000\"\n    83→            />\n    84→            {/* Shark Gills */}\n    85→            <line x1=\"70\" y1=\"85\" x2=\"70\" y2=\"95\" stroke=\"#6B7280\" strokeWidth=\"2\" />\n    86→            <line x1=\"75\" y1=\"85\" x2=\"75\" y2=\"95\" stroke=\"#6B7280\" strokeWidth=\"2\" />\n    87→            <line x1=\"80\" y1=\"85\" x2=\"80\" y2=\"95\" stroke=\"#6B7280\" strokeWidth=\"2\" />\n    88→          </svg>\n    89→        </div>\n    90→\n    91→        {/* Login Form */}\n    92→        <div className=\"bg-white rounded-2xl shadow-xl p-8 space-y-6\">\n    93→          <div className=\"text-center\">\n    94→            <h2 className=\"text-3xl font-bold text-gray-900\">Welcome Back</h2>\n    95→            <p className=\"mt-2 text-sm text-gray-600\">Sign in to your account</p>\n    96→          </div>\n    97→\n    98→          <form onSubmit={handleSubmit} className=\"space-y-4\">\n    99→            <div>\n   100→              <label\n   101→                htmlFor=\"username\"\n   102→                className=\"block text-sm font-medium text-gray-700 mb-2\"\n   103→              >\n   104→                Username\n   105→              </label>\n   106→              <input\n   107→                id=\"username\"\n   108→                type=\"text\"\n   109→                value={username}\n   110→                onChange={(e) => setUsername(e.target.value)}\n   111→                required\n   112→                className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all\"\n   113→                placeholder=\"Enter your username\"\n   114→              />\n   115→            </div>\n   116→\n   117→            <div>\n   118→              <label\n   119→                htmlFor=\"password\"\n   120→                className=\"block text-sm font-medium text-gray-700 mb-2\"\n   121→              >\n   122→                Password\n   123→              </label>\n   124→              <input\n   125→                id=\"password\"\n   126→                type=\"password\"\n   127→                value={password}\n   128→                onChange={(e) => setPassword(e.target.value)}\n   129→                required\n   130→                className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all\"\n   131→                placeholder=\"Enter your password\"\n   132→              />\n   133→            </div>\n   134→\n   135→            {error && (\n   136→              <div className=\"bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm\">\n   137→                {error}\n   138→              </div>\n   139→            )}\n   140→\n   141→            <button\n   142→              type=\"submit\"\n   143→              disabled={loading}\n   144→              className=\"w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed\"\n   145→            >\n   146→              {loading ? 'Signing in...' : 'Sign In'}\n   147→            </button>\n   148→          </form>\n   149→        </div>\n   150→      </div>\n   151→    </div>\n   152→  );\n   153→}\n   154→\n\n<system-reminder>\nWhenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.\n</system-reminder>\n",
+          "timestamp": "2025-12-13T21:39:32.145Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "Edit",
+          "input": {
+            "file_path": "/Users/aidancunniffe/testing-gitflows-git-ai/login-form.react.ts",
+            "new_string": "import React, { useState } from 'react';\n\n// Hello world\n\nexport default function LoginForm() {",
+            "old_string": "import React, { useState } from 'react';\n\nexport default function LoginForm() {"
+          },
+          "timestamp": "2025-12-13T21:39:35.712Z"
+        },
+        {
+          "type": "user",
+          "text": "The file /Users/aidancunniffe/testing-gitflows-git-ai/login-form.react.ts has been updated. Here's the result of running `cat -n` on a snippet of the edited file:\n     1→import React, { useState } from 'react';\n     2→\n     3→// Hello world\n     4→\n     5→export default function LoginForm() {\n     6→  const [username, setUsername] = useState('');\n     7→  const [password, setPassword] = useState('');\n     8→  const [error, setError] = useState('');\n     9→  const [loading, setLoading] = useState(false);",
+          "timestamp": "2025-12-13T21:39:39.331Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Done! I've added \"Hello world\" as a comment at the top of [login-form.react.ts:3](login-form.react.ts#L3).",
+          "timestamp": "2025-12-13T21:39:44.512Z"
+        }
+      ],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
