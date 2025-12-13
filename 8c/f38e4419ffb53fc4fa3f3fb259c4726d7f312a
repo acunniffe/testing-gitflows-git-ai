@@ -1,0 +1,53 @@
+login-form.react.ts
+  0cab6b60b49e188a 4,7,10-30,32-38,43-59,63-64,76,99,103,106,140,142-146,149-169,172-197,211-215,218-234
+  071ad78f72901c0a 90-92,96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.25",
+  "base_commit_sha": "8cf38e4419ffb53fc4fa3f3fb259c4726d7f312a",
+  "prompts": {
+    "071ad78f72901c0a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "80dc1cc1-96fc-450c-961b-3af65def1414",
+        "model": "default"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "@login-form.react.ts:90-137 replace this shark with @shark.svg",
+          "timestamp": "2025-12-13T20:00:51.224Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Reading `login-form.react.ts` and `shark.svg` to replace the inline SVG shark with the SVG file content.",
+          "timestamp": "2025-12-13T20:00:53.958Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Replacing the inline SVG shark with the content from `shark.svg`, preserving the existing styling.",
+          "timestamp": "2025-12-13T20:01:03.531Z"
+        }
+      ],
+      "total_additions": 8,
+      "total_deletions": 49,
+      "accepted_lines": 4,
+      "overriden_lines": 0
+    },
+    "0cab6b60b49e188a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "30e43e24-f3b8-4283-a536-832dc346dc69",
+        "model": "default"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 136,
+      "total_deletions": 8,
+      "accepted_lines": 130,
+      "overriden_lines": 0
+    }
+  }
+}
