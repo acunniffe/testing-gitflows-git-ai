@@ -1,0 +1,37 @@
+login-form.react.tsx
+  3a0697ca1da09c44 4,7,10-13,32-40,49-60,62,67-68,73-82,86-87,99-105,169,173,176,230,235-246,249-266,278,281-290
+  e551b6cf0a7483f7 14-19,21-31,41-48,61,69-72,192,197-216
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.25",
+  "base_commit_sha": "923b9f80435341adecea6ec24670ef66eceeb965",
+  "prompts": {
+    "3a0697ca1da09c44": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2edc2d38-84c1-4f87-b162-82a2668cba47",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 99,
+      "total_deletions": 7,
+      "accepted_lines": 95,
+      "overriden_lines": 0
+    },
+    "e551b6cf0a7483f7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "59d7c4bf-6d08-49e7-99f2-544b4cf9ea24",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 51,
+      "total_deletions": 1,
+      "accepted_lines": 51,
+      "overriden_lines": 0
+    }
+  }
+}
