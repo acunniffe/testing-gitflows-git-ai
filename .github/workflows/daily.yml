@@ -17,7 +17,7 @@ jobs:
     continue-on-error: true
     permissions:
       contents: read
-      pull-requests: read
+      pull-requests: write
     steps:
       - name: Run Git AI PR Viewer
         uses: git-ai-project/action/pr-diff-viewer@experimental/pr-viewer
