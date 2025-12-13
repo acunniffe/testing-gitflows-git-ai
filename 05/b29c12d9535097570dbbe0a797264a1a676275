@@ -1,0 +1,62 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.25",
+  "base_commit_sha": "05b29c12d9535097570dbbe0a797264a1a676275",
+  "prompts": {
+    "4bd127f8e3eccb02": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "bad7c939-1907-4810-9204-27b4c8c337bf",
+        "model": "claude-4.5-sonnet-thinking"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "@login-form.react.ts:90-137 add messages in the standard format Git AI uses \n\nfirst one Add a Sign Up button to the Login Page. \n@login-form.react.ts:1-154 \n\n\"It should include a second password input for validation, and enforce medium security password rules\"\n\nhere's the JSON structure. make up some answers \n\n@zsh (220-240)",
+          "timestamp": "2025-12-13T20:10:28.263Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I'll read the `prompt` file to see the current structure and then add the new messages in the Git AI format.",
+          "timestamp": "2025-12-13T20:10:35.191Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Now I'll add the new messages in the Git AI format. I'll create a new prompt entry with the Sign Up button conversation:",
+          "timestamp": "2025-12-13T20:10:40.163Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Done! I've added a new prompt entry in the Git AI format with:\n\n- **Prompt ID**: `a3f9c82d41be7f5e`\n- **5 messages** following the conversation flow:\n  1. User request to add Sign Up button\n  2. Assistant acknowledgment\n  3. User clarification about password validation requirements\n  4. Assistant explaining the security rules (8+ chars, uppercase, lowercase, number)\n  5. Assistant describing the implementation details\n\nThe entry includes made-up statistics (`total_additions: 87`, `total_deletions: 12`, `accepted_lines: 75`, `overriden_lines: 0`) and follows the same structure as the existing Git AI prompt entries in the file.",
+          "timestamp": "2025-12-13T20:10:53.763Z"
+        },
+        {
+          "type": "user",
+          "text": "command to save contents as file as the git note for a sha",
+          "timestamp": "2025-12-13T20:11:26.407Z"
+        },
+        {
+          "type": "assistant",
+          "text": "To save the contents of a file as a git note for a specific SHA, you can use:\n\n```bash\ngit notes add -F <file> <commit-sha>\n```\n\n**Examples:**\n\n```bash\n# Add contents of prompt file as a note to a specific commit\ngit notes add -F prompt abc123def\n\n# If you want to edit/replace an existing note, use --force\ngit notes add -f -F prompt abc123def\n\n# Add note to HEAD commit\ngit notes add -F prompt HEAD\n```\n\n**Other useful git notes commands:**\n\n```bash\n# View notes for a commit\ngit notes show <commit-sha>\n\n# View commit with its notes\ngit log --show-notes\n\n# Edit a note interactively\ngit notes edit <commit-sha>\n\n# Remove a note\ngit notes remove <commit-sha>\n\n# Push notes to remote\ngit push origin refs/notes/*\n\n# Fetch notes from remote\ngit fetch origin refs/notes/*:refs/notes/*\n```\n\n**Note:** By default, git notes are stored in the `refs/notes/commits` namespace. They're not automatically pushed/pulled with regular git operations, so you need to explicitly push/fetch them if you want to share them.\n\nIn the context of your `prompt` file, if you wanted to attach it as a git note to a commit, you'd run something like:\n\n```bash\ngit notes add -F prompt 8cf38e4419ffb53fc4fa3f3fb259c4726d7f312a\n```\n\n(using the base_commit_sha from your prompt file)",
+          "timestamp": "2025-12-13T20:11:31.239Z"
+        },
+        {
+          "type": "user",
+          "text": "for notes/ai",
+          "timestamp": "2025-12-13T20:11:56.055Z"
+        },
+        {
+          "type": "assistant",
+          "text": "To save contents as a git note in the `notes/ai` namespace (instead of the default `notes/commits`), use the `--ref` option:\n\n```bash\ngit notes --ref=ai add -F <file> <commit-sha>\n```\n\n**Examples:**\n\n```bash\n# Add contents of prompt file as a note in the ai namespace\ngit notes --ref=ai add -F prompt abc123def\n\n# Force update if note already exists\ngit notes --ref=ai add -f -F prompt abc123def\n\n# Add to HEAD commit\ngit notes --ref=ai add -F prompt HEAD\n```\n\n**Other useful commands for the ai namespace:**\n\n```bash\n# View ai notes for a commit\ngit notes --ref=ai show <commit-sha>\n\n# List all commits with ai notes\ngit log --notes=ai\n\n# Edit an ai note\ngit notes --ref=ai edit <commit-sha>\n\n# Remove an ai note\ngit notes --ref=ai remove <commit-sha>\n\n# Push ai notes to remote\ngit push origin refs/notes/ai\n\n# Fetch ai notes from remote\ngit fetch origin refs/notes/ai:refs/notes/ai\n```\n\nThe `notes/ai` namespace is useful for keeping AI-generated or AI-related notes separate from other types of notes, making them easier to manage and query independently.",
+          "timestamp": "2025-12-13T20:12:00.215Z"
+        }
+      ],
+      "total_additions": 92,
+      "total_deletions": 0,
+      "accepted_lines": 95,
+      "overriden_lines": 0
+    }
+  }
+}
