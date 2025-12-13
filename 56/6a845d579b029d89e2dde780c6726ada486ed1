@@ -1,0 +1,53 @@
+shark-rater.ts
+  3676777cef0b0110 1-121
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.24",
+  "base_commit_sha": "566a845d579b029d89e2dde780c6726ada486ed1",
+  "prompts": {
+    "3676777cef0b0110": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b1422e4c-4a89-4101-a86c-dc9223ad9db8",
+        "model": "claude-sonnet-4-5-20250929"
+      },
+      "human_author": "Sasha Varlamov <sasha@sashavarlamov.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "build a single .ts file that takes a path to an svg and rates the quality of the shark pic. Criteria: 1 point if it has a shark. 1-5 points how for scary. 1-2 points for the style! ",
+          "timestamp": "2025-12-13T20:46:16.974Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I'll create a TypeScript file that analyzes SVG shark pictures and rates them based on your criteria.",
+          "timestamp": "2025-12-13T20:46:24.556Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "Write",
+          "input": {
+            "content": "import Anthropic from \"@anthropic-ai/sdk\";\nimport { readFileSync } from \"fs\";\n\ninterface SharkRating {\n  hasShark: boolean;\n  sharkPoints: number; // 0 or 1\n  scaryPoints: number; // 1-5\n  stylePoints: number; // 1-2\n  totalScore: number;\n  explanation: string;\n}\n\nasync function rateSharkSVG(svgPath: string): Promise<SharkRating> {\n  // Read the SVG file\n  const svgContent = readFileSync(svgPath, \"utf-8\");\n\n  // Convert SVG to base64 for the API\n  const svgBase64 = Buffer.from(svgContent).toString(\"base64\");\n\n  // Initialize Anthropic client\n  const client = new Anthropic({\n    apiKey: process.env.ANTHROPIC_API_KEY,\n  });\n\n  // Create the analysis prompt\n  const prompt = `Analyze this image and rate it as a shark picture using these criteria:\n\n1. Does it contain a shark? (1 point if yes, 0 if no)\n2. How scary is the shark? (1-5 points, where 1 = not scary at all, 5 = terrifying)\n3. Style quality (1-2 points, where 1 = basic/simple style, 2 = polished/artistic style)\n\nRespond ONLY with a JSON object in this exact format:\n{\n  \"hasShark\": true/false,\n  \"sharkPoints\": 0 or 1,\n  \"scaryPoints\": 1-5,\n  \"stylePoints\": 1-2,\n  \"explanation\": \"brief explanation of your ratings\"\n}`;\n\n  const message = await client.messages.create({\n    model: \"claude-sonnet-4-5-20250929\",\n    max_tokens: 1024,\n    messages: [\n      {\n        role: \"user\",\n        content: [\n          {\n            type: \"image\",\n            source: {\n              type: \"base64\",\n              media_type: \"image/svg+xml\",\n              data: svgBase64,\n            },\n          },\n          {\n            type: \"text\",\n            text: prompt,\n          },\n        ],\n      },\n    ],\n  });\n\n  // Parse the response\n  const responseText = message.content[0].type === \"text\"\n    ? message.content[0].text\n    : \"\";\n\n  // Extract JSON from response (handle potential markdown code blocks)\n  const jsonMatch = responseText.match(/\\{[\\s\\S]*\\}/);\n  if (!jsonMatch) {\n    throw new Error(\"Failed to parse response from Claude\");\n  }\n\n  const rating = JSON.parse(jsonMatch[0]);\n\n  return {\n    hasShark: rating.hasShark,\n    sharkPoints: rating.sharkPoints,\n    scaryPoints: rating.scaryPoints,\n    stylePoints: rating.stylePoints,\n    totalScore: rating.sharkPoints + rating.scaryPoints + rating.stylePoints,\n    explanation: rating.explanation,\n  };\n}\n\n// Main execution\nasync function main() {\n  const svgPath = process.argv[2];\n\n  if (!svgPath) {\n    console.error(\"Usage: ts-node shark-rater.ts <path-to-svg>\");\n    process.exit(1);\n  }\n\n  if (!process.env.ANTHROPIC_API_KEY) {\n    console.error(\"Error: ANTHROPIC_API_KEY environment variable is required\");\n    process.exit(1);\n  }\n\n  try {\n    console.log(`Analyzing shark image: ${svgPath}\\n`);\n\n    const rating = await rateSharkSVG(svgPath);\n\n    console.log(\"🦈 SHARK RATING RESULTS 🦈\");\n    console.log(\"=\" .repeat(40));\n    console.log(`Has Shark: ${rating.hasShark ? \"✓\" : \"✗\"} (${rating.sharkPoints} point)`);\n    console.log(`Scary Level: ${\"🦈\".repeat(rating.scaryPoints)} (${rating.scaryPoints}/5 points)`);\n    console.log(`Style Quality: ${\"⭐\".repeat(rating.stylePoints)} (${rating.stylePoints}/2 points)`);\n    console.log(\"=\" .repeat(40));\n    console.log(`TOTAL SCORE: ${rating.totalScore}/8 points`);\n    console.log(`\\nExplanation: ${rating.explanation}`);\n  } catch (error) {\n    console.error(\"Error rating shark:\", error);\n    process.exit(1);\n  }\n}\n\nmain();\n",
+            "file_path": "/Users/svarlamov/projects/testing-gitflows-git-ai/shark-rater.ts"
+          },
+          "timestamp": "2025-12-13T20:46:39.962Z"
+        },
+        {
+          "type": "user",
+          "text": "File created successfully at: /Users/svarlamov/projects/testing-gitflows-git-ai/shark-rater.ts",
+          "timestamp": "2025-12-13T20:46:43.314Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I've created `shark-rater.ts`! This TypeScript file uses Claude's vision API to analyze SVG shark images and rate them based on your criteria.\n\n**Features:**\n- **Shark Detection**: 1 point if a shark is present\n- **Scary Rating**: 1-5 points based on how terrifying the shark is\n- **Style Rating**: 1-2 points for artistic quality\n- **Total Score**: Out of 8 possible points\n\n**To use it:**\n\n1. Install dependencies:\n```bash\nnpm install @anthropic-ai/sdk\nnpm install -D @types/node typescript ts-node\n```\n\n2. Set your API key:\n```bash\nexport ANTHROPIC_API_KEY='your-api-key-here'\n```\n\n3. Run it:\n```bash\nts-node shark-rater.ts path/to/your/shark.svg\n```\n\nThe script will analyze the SVG using Claude's vision model and output a detailed rating with an explanation!",
+          "timestamp": "2025-12-13T20:46:52.691Z"
+        }
+      ],
+      "total_additions": 121,
+      "total_deletions": 0,
+      "accepted_lines": 121,
+      "overriden_lines": 0
+    }
+  }
+}
