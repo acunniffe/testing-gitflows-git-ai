@@ -1,0 +1,39 @@
+shark.svg
+  e3857c96ab666826 2-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.25",
+  "base_commit_sha": "0407d947ce537caed8e62ac7e9001cb646f2ab57",
+  "prompts": {
+    "e3857c96ab666826": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "9dabd377-ae34-49c1-870b-dbb043940d65",
+        "model": "claude-4.5-sonnet-thinking"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "@shark.svg should be fierce!!! Make him scary",
+          "timestamp": "2025-12-13T20:03:31.524Z"
+        },
+        {
+          "type": "assistant",
+          "text": "I'll help you make the shark SVG look more fierce and scary! Let me first see what we're currently working with.",
+          "timestamp": "2025-12-13T20:03:35.460Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Now I'll transform this friendly shark into a fierce, scary predator! I'll make it darker, more aggressive-looking, with sharper features and a menacing appearance.",
+          "timestamp": "2025-12-13T20:03:41.076Z"
+        }
+      ],
+      "total_additions": 2,
+      "total_deletions": 2,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
