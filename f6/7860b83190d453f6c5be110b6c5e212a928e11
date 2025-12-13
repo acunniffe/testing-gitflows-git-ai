@@ -1,0 +1,23 @@
+login-form.react.tsx
+  539b349ca5a82781 1-343
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.25",
+  "base_commit_sha": "f67860b83190d453f6c5be110b6c5e212a928e11",
+  "prompts": {
+    "539b349ca5a82781": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "517d5029-75ba-4823-8133-30d2feff7741",
+        "model": "composer-1"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 360,
+      "total_deletions": 17,
+      "accepted_lines": 343,
+      "overriden_lines": 0
+    }
+  }
+}
