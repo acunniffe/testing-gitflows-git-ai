@@ -13,7 +13,18 @@ login-form.react.ts
         "model": "unknown"
       },
       "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
-      "messages": [],
+      "messages": [
+{
+          "type": "user",
+          "text": "Make this a combined signup/login component IN sign up mode - password should require medium security and you should have to provide same one twice - username should be alphanumeric only, alpha start",
+          "timestamp": "2025-12-05T01:22:13.211Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Fully implimented the requirements you specified.",
+          "timestamp": "2025-12-05T01:22:38.724Z"
+        }
+	],
       "total_additions": 176,
       "total_deletions": 7,
       "accepted_lines": 172,
