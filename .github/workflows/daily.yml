@@ -1,0 +1,57 @@
+# Example workflow - Copy this to your repository's .github/workflows/ directory
+# Rename to git-ai.yml or similar
+
+name: Git AI Dashboards
+
+on:
+  pull_request:
+    types: [closed, opened, synchronize]
+  schedule:
+    - cron: "0 0 * * *" # Daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  pr-viewer:
+    if: github.event.pull_request && (github.event.action == 'opened' || github.event.action == 'synchronize')
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Run Git AI PR Viewer
+        uses: git-ai-project/action/pr-diff-viewer@experimental/pr-viewer
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  pr-close:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: write
+    steps:
+      - name: Run Git AI PR Close
+        uses: git-ai-project/action/pr-close@v1
+        with:
+          pr-url: ${{ github.event.pull_request.html_url }}
+          merge-commit-sha: ${{ github.event.pull_request.merge_commit_sha }}
+          OTEL_EXPORTER_OTLP_ENDPOINT: ${{ secrets.OTEL_EXPORTER_OTLP_ENDPOINT }}
+          OTEL_EXPORTER_OTLP_HEADERS: ${{ secrets.OTEL_EXPORTER_OTLP_HEADERS }}
+          OTEL_SERVICE_NAME: "git-ai-dashboards"
+
+  daily-metrics:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: read
+    steps:
+      - name: Run Git AI Daily Metrics
+        uses: git-ai-project/action/daily-metrics@v1
+        with:
+          OTEL_EXPORTER_OTLP_ENDPOINT: ${{ secrets.OTEL_EXPORTER_OTLP_ENDPOINT }}
+          OTEL_EXPORTER_OTLP_HEADERS: ${{ secrets.OTEL_EXPORTER_OTLP_HEADERS }}
+          OTEL_SERVICE_NAME: "git-ai-dashboards"
+
+
