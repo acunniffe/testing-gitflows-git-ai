@@ -1,0 +1,23 @@
+Readme.md
+  d9ad63aaa66bfa0f 3,5,7-10,12,14-16,18-19,21-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.35",
+  "base_commit_sha": "a1eb8624826d44414d115bae89abfa7587e862cf",
+  "prompts": {
+    "d9ad63aaa66bfa0f": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "6377931e-f433-4800-b4d7-ef6af18d481f-381d3b4f-50d8-4084-9539-1e8d2be053e2",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 15,
+      "total_deletions": 15,
+      "accepted_lines": 15,
+      "overriden_lines": 0
+    }
+  }
+}
