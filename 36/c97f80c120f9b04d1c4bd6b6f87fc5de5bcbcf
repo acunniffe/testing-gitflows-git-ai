@@ -1,0 +1,23 @@
+example.md
+  260b26ba6ba8ea00 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.37",
+  "base_commit_sha": "36c97f80c120f9b04d1c4bd6b6f87fc5de5bcbcf",
+  "prompts": {
+    "260b26ba6ba8ea00": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "12798ece-f91e-4ebb-b05e-52e90975ce8a",
+        "model": "composer-1"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
