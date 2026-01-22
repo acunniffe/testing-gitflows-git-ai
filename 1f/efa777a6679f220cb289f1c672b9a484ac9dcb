@@ -1,0 +1,23 @@
+file.ts
+  6fe039b5aff44a85 131-136,368-463
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.38",
+  "base_commit_sha": "1fefa777a6679f220cb289f1c672b9a484ac9dcb",
+  "prompts": {
+    "6fe039b5aff44a85": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "80ae636e-0070-4675-84a8-1679095c9b95",
+        "model": "composer-1"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 103,
+      "total_deletions": 2,
+      "accepted_lines": 102,
+      "overriden_lines": 0
+    }
+  }
+}
