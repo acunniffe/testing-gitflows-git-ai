@@ -1,4 +1,7 @@
 # Shark Rater
+Aidan Cunniffe
+
+## A quick demo of Git AI Rewrites
 
 A TypeScript tool that uses Claude's vision capabilities to analyze and rate shark images on multiple criteria.
 
