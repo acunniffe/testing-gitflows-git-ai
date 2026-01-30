@@ -1,0 +1,24 @@
+Readme.md
+  734059e9eb34106b 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.0.41",
+  "base_commit_sha": "121623356fc1b34c3a2c231540ea80f7d362e458",
+  "prompts": {
+    "734059e9eb34106b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d56c53ab-7efa-42d9-8b97-4a6406813434",
+        "model": "composer-1"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0,
+      "messages_url": "https://usegitai.com/cas/39a3d6ea6fc09799faf876ee651efc14235d5c2a3d534f3ea20e09e7e912a1fa"
+    }
+  }
+}
