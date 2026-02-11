@@ -1,0 +1,24 @@
+alphabets.md
+  668878c6c4a6b8b2 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.1",
+  "base_commit_sha": "8a5d5f760f0199438932f00ef932085aff38f1bb",
+  "prompts": {
+    "668878c6c4a6b8b2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c526341-7e89-4271-8e80-cc7f993b758b",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 35,
+      "total_deletions": 0,
+      "accepted_lines": 35,
+      "overriden_lines": 0,
+      "messages_url": "https://dev.usegitai.com/cas/78f07daefb099c95fd0fe07e966c453c4f829a5a55492fe46be762fe89a464ed"
+    }
+  }
+}
