@@ -1,0 +1,24 @@
+poppy.ts
+  6fffffa95062ea6e 1-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.3",
+  "base_commit_sha": "c63e5b799f5ef71e2a2463833116517fff948b3b",
+  "prompts": {
+    "6fffffa95062ea6e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d96bcd4a-b067-4aac-9d6c-09b0d06df45b",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 22,
+      "total_deletions": 0,
+      "accepted_lines": 22,
+      "overriden_lines": 0,
+      "messages_url": "https://dev.usegitai.com/cas/2f86ae99a919e30a95cb2ba276d4589e1c6112e7a3fb5d589a1dea61618de04a"
+    }
+  }
+}
