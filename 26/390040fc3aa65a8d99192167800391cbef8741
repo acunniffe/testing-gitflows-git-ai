@@ -1,0 +1,24 @@
+LOTR
+  815aa4e78a4d6bca 1-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.3",
+  "base_commit_sha": "26390040fc3aa65a8d99192167800391cbef8741",
+  "prompts": {
+    "815aa4e78a4d6bca": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ec683830-8197-40db-922f-3cc6516d72b9",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 5,
+      "total_deletions": 0,
+      "accepted_lines": 5,
+      "overriden_lines": 0,
+      "messages_url": "http://localhost:4000/cas/9dea0f2ec387a72978d48ef5af68c7d7e6d0f28745fc15261821637f8e2b8b5a"
+    }
+  }
+}
