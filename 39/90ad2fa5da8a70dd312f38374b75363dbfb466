@@ -1,0 +1,24 @@
+potter.md
+  0820a066ecc2d717 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.4",
+  "base_commit_sha": "3990ad2fa5da8a70dd312f38374b75363dbfb466",
+  "prompts": {
+    "0820a066ecc2d717": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "64d0c920-71d6-4bc8-80a8-8565ed690423",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 7,
+      "total_deletions": 0,
+      "accepted_lines": 7,
+      "overriden_lines": 0,
+      "messages_url": "http://localhost:4000/cas/203afa2da74833df53899df70935710372933478d8e79d0a6b82b9bacd744e8f"
+    }
+  }
+}
