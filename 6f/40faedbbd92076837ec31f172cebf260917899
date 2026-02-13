@@ -1,0 +1,24 @@
+prime_factorization.rs
+  23d1edd52a0b636c 1-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.4",
+  "base_commit_sha": "6f40faedbbd92076837ec31f172cebf260917899",
+  "prompts": {
+    "23d1edd52a0b636c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "14dd553e-07b2-44a5-b244-f8d4e20bf566",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 53,
+      "overriden_lines": 0,
+      "messages_url": "http://localhost:4000/cas/0f940f0282e6ac3b8542073b526db4b75032bac9d5b1f651055b4b72b421b619"
+    }
+  }
+}
