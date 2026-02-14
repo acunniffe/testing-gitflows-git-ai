@@ -1,0 +1,23 @@
+Earthsea.md
+  503112321bcc4939 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.4",
+  "base_commit_sha": "d25e7b87ed770a76ce06184b5547d31f780c52a1",
+  "prompts": {
+    "503112321bcc4939": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8debe0d2-5f0a-411b-b56a-07215ed15d2c",
+        "model": "<synthetic>"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 8,
+      "total_deletions": 0,
+      "accepted_lines": 8,
+      "overriden_lines": 0
+    }
+  }
+}
