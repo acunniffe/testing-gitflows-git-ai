@@ -1,0 +1,23 @@
+america.md
+  69000ec4217d2e3a 1-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.4",
+  "base_commit_sha": "76a327863c6ca434fe5664cb070904636583939e",
+  "prompts": {
+    "69000ec4217d2e3a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a3b5806-f007-4032-9cab-126df33af43d",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 5,
+      "total_deletions": 0,
+      "accepted_lines": 5,
+      "overriden_lines": 0
+    }
+  }
+}
