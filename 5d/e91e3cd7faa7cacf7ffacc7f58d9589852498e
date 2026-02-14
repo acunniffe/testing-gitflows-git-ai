@@ -1,0 +1,23 @@
+prime_factorization.rs
+  7077d8f05ced08a9 3,19-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.4",
+  "base_commit_sha": "5de91e3cd7faa7cacf7ffacc7f58d9589852498e",
+  "prompts": {
+    "7077d8f05ced08a9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ed288570-951d-4260-a911-d7b7728d7358",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 17,
+      "overriden_lines": 0
+    }
+  }
+}
