@@ -1,0 +1,5 @@
+# Histoire des États-Unis d'Amérique
+
+Les États-Unis d'Amérique ont été fondés en 1776, lorsque treize colonies britanniques ont déclaré leur indépendance de la Grande-Bretagne. Après une guerre révolutionnaire victorieuse, les pères fondateurs ont établi une république constitutionnelle basée sur les principes de liberté et de démocratie. Au cours du XIXe siècle, le pays s'est étendu vers l'ouest, a survécu à une guerre civile dévastatrice entre le Nord et le Sud (1861-1865), et s'est transformé en une puissance industrielle majeure grâce à l'immigration massive et à l'innovation technologique.
+
+Au XXe siècle, les États-Unis sont devenus une superpuissance mondiale après leur participation aux deux guerres mondiales. La guerre froide avec l'Union soviétique a dominé la politique étrangère pendant des décennies, tandis qu'à l'intérieur du pays, le mouvement des droits civiques a lutté pour l'égalité raciale. Après la chute du mur de Berlin en 1989, les États-Unis sont restés la première puissance économique et militaire du monde, tout en faisant face à de nouveaux défis tels que le terrorisme, les inégalités sociales et les changements climatiques.
