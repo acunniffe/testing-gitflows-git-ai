@@ -1,0 +1,24 @@
+numbers-to-100.md
+  bd4fa18e9a568aa5 1-100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.4",
+  "base_commit_sha": "ee294f942f92a0bb96b4129c5516b04b8040b4e4",
+  "prompts": {
+    "bd4fa18e9a568aa5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "79324a24-69cb-4953-a0b1-a47ff0df695d",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 100,
+      "total_deletions": 0,
+      "accepted_lines": 100,
+      "overriden_lines": 0,
+      "messages_url": "http://localhost:4000/cas/c10141ed4c3f2941147162bf8bb1f7e96247bde4d80c9182f7f8805ebd52bbcd"
+    }
+  }
+}
