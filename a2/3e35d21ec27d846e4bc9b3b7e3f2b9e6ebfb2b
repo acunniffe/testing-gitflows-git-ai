@@ -1,0 +1,24 @@
+western.md
+  353f5f9da1e60cc6 1-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.5",
+  "base_commit_sha": "a23e35d21ec27d846e4bc9b3b7e3f2b9e6ebfb2b",
+  "prompts": {
+    "353f5f9da1e60cc6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b09afba7-8f79-48f3-b832-853e2827b8d2",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 59,
+      "total_deletions": 0,
+      "accepted_lines": 59,
+      "overriden_lines": 0,
+      "messages_url": "https://dev.usegitai.com/cas/5108f88e2c69c19820811bb950c4a54c93cae4c2c58fcd88e55adf2bc1f2a0ba"
+    }
+  }
+}
