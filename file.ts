@@ -1,15 +1,5 @@
-// Hello world
 
-/**
- * Calculate pi using the Leibniz formula (infinite series)
- * π/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - ...
- * 
- * @param iterations - Number of iterations (more iterations = more accuracy)
- * @returns Approximation of pi
- */
-
-// Hello world
-
+// Pi
 export function calculatePiLeibniz(iterations: number): number {
   let pi = 0;
   for (let i = 0; i < iterations; i++) {
