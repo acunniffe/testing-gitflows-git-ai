@@ -7,6 +7,9 @@
  * @param iterations - Number of iterations (more iterations = more accuracy)
  * @returns Approximation of pi
  */
+
+// Hello world
+
 export function calculatePiLeibniz(iterations: number): number {
   let pi = 0;
   for (let i = 0; i < iterations; i++) {
