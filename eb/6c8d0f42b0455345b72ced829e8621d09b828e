@@ -1,0 +1,24 @@
+xyz.md
+  84c175d6b71c28a8 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.5",
+  "base_commit_sha": "eb6c8d0f42b0455345b72ced829e8621d09b828e",
+  "prompts": {
+    "84c175d6b71c28a8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "87988edb-5bb7-4527-8d17-00ce382057db",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0,
+      "messages_url": "https://dev.usegitai.com/cas/5639877077355b21d5a90582e5600ce02bff044903a4cb9c04ef170e2d51b3be"
+    }
+  }
+}
