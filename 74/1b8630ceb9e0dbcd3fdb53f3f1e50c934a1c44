@@ -1,0 +1,24 @@
+xyzabc.md
+  ebb6bb7a115e12c9 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.5",
+  "base_commit_sha": "741b8630ceb9e0dbcd3fdb53f3f1e50c934a1c44",
+  "prompts": {
+    "ebb6bb7a115e12c9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a8530dd-c03c-4414-8a14-534ace95b00e",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 0,
+      "accepted_lines": 11,
+      "overriden_lines": 0,
+      "messages_url": "https://dev.usegitai.com/cas/8d85eca9f2e568ef1390d1692930ff9318bf3faba5befc17c3c0439bf48e72d7"
+    }
+  }
+}
