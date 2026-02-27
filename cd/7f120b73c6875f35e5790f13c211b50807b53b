@@ -1,0 +1,25 @@
+migrations/001_initial_schema.sql
+  c9570caa79f80137 1-21
+migrate.js
+  c9570caa79f80137 1-92
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.6",
+  "base_commit_sha": "cd7f120b73c6875f35e5790f13c211b50807b53b",
+  "prompts": {
+    "c9570caa79f80137": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "3bff08a7-bc3a-4a7d-8586-285b464f95b9",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 113,
+      "total_deletions": 0,
+      "accepted_lines": 113,
+      "overriden_lines": 0
+    }
+  }
+}
