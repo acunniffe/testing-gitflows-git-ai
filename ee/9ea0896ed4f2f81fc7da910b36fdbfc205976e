@@ -1,0 +1,24 @@
+story4.md
+  a128647fedd2a1af 1-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.9",
+  "base_commit_sha": "ee9ea0896ed4f2f81fc7da910b36fdbfc205976e",
+  "prompts": {
+    "a128647fedd2a1af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "61f51cc5-f8d4-42e6-b989-61281f3d7d16",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 21,
+      "total_deletions": 0,
+      "accepted_lines": 21,
+      "overriden_lines": 0,
+      "messages_url": "http://localhost:4000/cas/04616fcadffc6c550d6e56a7c6744f322f18f7fef478bf8132fcd72a9fca8df8"
+    }
+  }
+}
