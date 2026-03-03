@@ -1,0 +1,41 @@
+story.md
+  5134859c71b2036f 1-21
+story1.md
+  5134859c71b2036f 1-21
+denis-villeneuve-movies.md
+  f261e0f356bc254f 1-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.9",
+  "base_commit_sha": "2bc115f8794fbefaa3a0db490050a245a6179484",
+  "prompts": {
+    "5134859c71b2036f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "705a7c56-4cdd-455d-b5fc-68258fcce4ac",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 42,
+      "total_deletions": 0,
+      "accepted_lines": 42,
+      "overriden_lines": 0,
+      "messages_url": "http://localhost:4000/cas/9c0486db4aa11358b6e684d572a8bca7377ab314b40aea17a961ab5ce8c3af74"
+    },
+    "f261e0f356bc254f": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "ab4650f1-cdcc-432a-9893-fb96e462f307",
+        "model": "unknown"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 65,
+      "total_deletions": 0,
+      "accepted_lines": 65,
+      "overriden_lines": 0
+    }
+  }
+}
