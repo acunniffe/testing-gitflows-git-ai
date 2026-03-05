@@ -1,0 +1,23 @@
+lalalalalalal.md
+  2ead781f5fcaef85 2-9,11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.8",
+  "base_commit_sha": "bb869a7394d585d6135e71a39c907a28e7b235f1",
+  "prompts": {
+    "2ead781f5fcaef85": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d93da2af-5cbf-4649-bff1-e56f92b99431",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 12,
+      "total_deletions": 1,
+      "accepted_lines": 9,
+      "overriden_lines": 0
+    }
+  }
+}
