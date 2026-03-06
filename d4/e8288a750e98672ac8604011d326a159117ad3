@@ -1,0 +1,39 @@
+lalalalalalal.md
+  2ead781f5fcaef85 2-9,11
+"story 6.md"
+  eab626d22b128dfd 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.9",
+  "base_commit_sha": "d4e8288a750e98672ac8604011d326a159117ad3",
+  "prompts": {
+    "2ead781f5fcaef85": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d93da2af-5cbf-4649-bff1-e56f92b99431",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 12,
+      "total_deletions": 1,
+      "accepted_lines": 9,
+      "overriden_lines": 0
+    },
+    "eab626d22b128dfd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ad7ab7be-a109-47e3-b560-8de7d8690437",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 0,
+      "accepted_lines": 11,
+      "overriden_lines": 0,
+      "messages_url": "https://usegitai.com/cas/45cf0bfe342d73410a036e48e636f8e4381a697250b7cd0d57a10b3790ad0dd6"
+    }
+  }
+}
