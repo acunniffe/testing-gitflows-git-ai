@@ -1,0 +1,24 @@
+"story 6.md"
+  eab626d22b128dfd 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.9",
+  "base_commit_sha": "6b00f6599cd5eb032a045b0bdc3401137d182706",
+  "prompts": {
+    "eab626d22b128dfd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ad7ab7be-a109-47e3-b560-8de7d8690437",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 0,
+      "accepted_lines": 11,
+      "overriden_lines": 0,
+      "messages_url": "https://usegitai.com/cas/45cf0bfe342d73410a036e48e636f8e4381a697250b7cd0d57a10b3790ad0dd6"
+    }
+  }
+}
