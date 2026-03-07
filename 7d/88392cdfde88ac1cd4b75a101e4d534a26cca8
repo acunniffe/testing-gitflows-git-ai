@@ -1,0 +1,40 @@
+what-is-a-western.md
+  72d37614c41699fb 1-30
+what-is-an-eastern.md
+  3797ea7d0cc6855a 1-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "development:1.1.9",
+  "base_commit_sha": "7d88392cdfde88ac1cd4b75a101e4d534a26cca8",
+  "prompts": {
+    "3797ea7d0cc6855a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0e1f7334-1707-4243-9a59-4cf99530a613",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 30,
+      "total_deletions": 0,
+      "accepted_lines": 30,
+      "overriden_lines": 0,
+      "messages_url": "http://localhost:4000/cas/4a31aaca4f722289807141c72432f5417358dd9a8190cab8d56a9558ae8907db"
+    },
+    "72d37614c41699fb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1b91f739-69d3-4c3e-b0bd-01e4202b0a6d",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Aidan Cunniffe <acunniffe@gmail.com>",
+      "messages": [],
+      "total_additions": 30,
+      "total_deletions": 0,
+      "accepted_lines": 30,
+      "overriden_lines": 0,
+      "messages_url": "http://localhost:4000/cas/5472f73832f59bd33051f9b510eeb034b6bd78b952f55d7dbef058af78e4f108"
+    }
+  }
+}
